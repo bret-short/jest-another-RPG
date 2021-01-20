@@ -6,12 +6,12 @@ jest.mock('../lib/Potion');
 console.log(new Potion());
 
 
-const { expect, jest, test } = require('@jest/globals');
+
 const Player = require('../lib/Player');
 
-test ('creates a player object', () => {
+test('creates a player object', () => {
     const player = new Player('Dave');
-    expect(player.inventory).toEqual(expect.arrayContaining([expect.any(object)]));
+    expect(player.inventory).toEqual(expect.arrayContaining([expect.any(Object)]));
     expect(player.name).toBe('Dave');
     expect(player.health).toEqual(expect.any(Number));
     expect(player.strength).toEqual(expect.any(Number));
